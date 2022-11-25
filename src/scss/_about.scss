@@ -1,0 +1,166 @@
+.about {
+  background: $backgroundSecondary;
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    justify-content: end;
+    @media (max-width: $breakpoint1450) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+  // .about__photo
+
+  &__photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 950px;
+    height: auto;
+    &__img {
+      width: 100%;
+    }
+    @media (max-width: 1700px) {
+      width: 825px;
+    }
+    @media (max-width: $breakpoint1450) {
+      position: relative;
+    }
+    @media (max-width: $breakpoint1024) {
+      width: 700px;
+    }
+    @media (max-width: $breakpoint992) {
+      width: 550px;
+    }
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+    }
+  }
+
+  // .about__info
+
+  &__info {
+    width: 50%;
+    padding: 60px 0 130px 152px;
+    @media (max-width: $breakpoint1450) {
+      width: 100%;
+      padding: 60px 0 60px 0;
+    }
+    @media (max-width: $breakpoint480) {
+      padding: 40px 0;
+    }
+
+    &__title {
+      color: #252525;
+      padding-bottom: 90px;
+
+      @media (max-width: $breakpoint1450) {
+        padding-bottom: 40px;
+      }
+      @media (max-width: $breakpoint480) {
+        padding-bottom: 10px;
+      }
+    }
+    &__desc {
+      margin-bottom: 35px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 120%;
+      text-align: justify;
+      color: #383838;
+      @media (max-width: $breakpoint1450) {
+        font-size: 18px;
+      }
+      @media (max-width: $breakpoint992) {
+        font-size: 14px;
+      }
+      @media (max-width: $breakpoint480) {
+        font-size: 12px;
+        margin-bottom: 15px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      &:nth-child(3) {
+        font-weight: 700;
+      }
+      &:last-of-type {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        padding-left: 15px;
+        @media (max-width: $breakpoint1024) {
+          font-size: 16px;
+        }
+        @media (max-width: $breakpoint992) {
+          font-size: 14px;
+        }
+        @media (max-width: $breakpoint480) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  // .about__socials
+
+  &__socials {
+    margin-top: 96px;
+    display: flex;
+    align-items: center;
+    gap: 160px;
+    @media (max-width: $breakpoint1024) {
+      margin-top: 40px;
+    }
+    @media (max-width: $breakpoint480) {
+      gap: 20px;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      @media (max-width: $breakpoint480) {
+        gap: 10px;
+      }
+
+      svg {
+        fill: #1b1b1b;
+        transition: 0.3s all;
+        @media (max-width: $breakpoint1024) {
+          width: 45px;
+        }
+        @media (max-width: $breakpoint480) {
+          width: 30px;
+        }
+      }
+      &:hover {
+        svg {
+          fill: $btnBackground;
+        }
+        span {
+          color: $btnBackground;
+        }
+      }
+      &__desc {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 110%;
+        color: #1b1b1b;
+        transition: 0.3s all;
+        @media (max-width: $breakpoint1450) {
+          font-size: 16px;
+        }
+        @media (max-width: $breakpoint992) {
+          font-size: 14px;
+        }
+        @media (max-width: $breakpoint480) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

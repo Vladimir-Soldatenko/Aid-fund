@@ -1,0 +1,157 @@
+.section__fund {
+  background: $backgroundPrimary;
+  position: relative;
+  overflow: hidden;
+}
+.fund {
+  &__info {
+    width: 63%;
+    color: $primary;
+    padding-bottom: 240px;
+    @media (max-width: $breakpoint1450) {
+      width: 100%;
+      padding-bottom: 100px;
+    }
+    @media (max-width: $breakpoint480) {
+      width: 100%;
+      padding-bottom: 40px;
+      padding-top: 15px;
+    }
+    &__subtitle {
+      padding-top: 200px;
+      font-weight: 400;
+      @media (max-width: $breakpoint1450) {
+        font-size: 24px;
+      }
+      @media (max-width: $breakpoint1024) {
+        font-size: 20px;
+        padding-top: 30px;
+      }
+      @media (max-width: $breakpoint480) {
+        font-size: 12px;
+      }
+    }
+    &__title {
+      font-size: 74px;
+      padding-bottom: 80px;
+      @media (max-width: $breakpoint1450) {
+        font-size: 50px;
+        padding-bottom: 50px;
+      }
+      @media (max-width: $breakpoint1024) {
+        font-size: 40px;
+        padding-bottom: 40px;
+      }
+      @media (max-width: $breakpoint480) {
+        font-size: 22px;
+      }
+    }
+    &__desc {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 140%;
+      color: $secondary;
+      margin-bottom: 80px;
+      @media (max-width: $breakpoint1450) {
+        font-size: 16px;
+        margin-bottom: 50px;
+      }
+      @media (max-width: $breakpoint1024) {
+        font-size: 14px;
+        margin-bottom: 25px;
+      }
+      @media (max-width: $breakpoint480) {
+        font-size: 12px;
+      }
+    }
+  }
+  &__btn__container {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    @media (max-width: $breakpoint480) {
+      width: 100%;
+    }
+    .fund__btn {
+      padding: 25px 100px;
+      color: #000;
+      border-radius: 119px;
+      margin-bottom: 10px;
+      text-align: center;
+      @media (max-width: $breakpoint1450) {
+        padding: 15px 40px;
+      }
+      @media (max-width: $breakpoint480) {
+        padding: 12px 80px;
+        font-size: 14px;
+      }
+    }
+  }
+  // .fund__img
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @media (max-width: $breakpoint1615) {
+      right: -150px;
+    }
+    @media (max-width: $breakpoint1450) {
+      position: relative;
+      right: 0;
+    }
+    @media (max-width: $breakpoint992) {
+      width: 100%;
+    }
+    img {
+      @media (max-width: $breakpoint992) {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        object-position: center;
+      }
+      @media (max-width: $breakpoint480) {
+        height: 220px;
+      }
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: rgba(14, 129, 241, 0.19);
+    filter: blur(250px);
+    top: 0;
+    right: 0;
+    width: 809px;
+    height: 721px;
+    @media (max-width: $breakpoint992) {
+      display: none;
+    }
+  }
+  @media (max-width: $breakpoint1450) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (max-width: $breakpoint992) {
+    flex-direction: column-reverse;
+  }
+  &__call {
+    background: $btnBackground;
+    color: #000;
+    border-radius: 50px;
+    text-align: center;
+    @media (max-width: $breakpoint1450) {
+      padding: 15px 40px;
+    }
+    @media (max-width: $breakpoint992) {
+      background: transparent;
+      border: 1px solid $btnBackground;
+      color: $secondary;
+    }
+    @media (max-width: $breakpoint480) {
+      padding: 12px 80px;
+      font-size: 14px;
+    }
+  }
+}

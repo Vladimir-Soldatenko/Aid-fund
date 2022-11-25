@@ -1,0 +1,181 @@
+.section__support {
+  background: $backgroundHeader;
+}
+
+.support__title {
+  color: $secondary;
+  padding: 100px 0 50px 0;
+  text-align: center;
+  @media (max-width: $breakpoint768) {
+    padding: 40px 0;
+  }
+}
+
+.recipient {
+  margin-bottom: 45px;
+}
+.company__name {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: $secondary;
+  @media (max-width: $breakpoint992) {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.tabs {
+  width: 815px;
+  margin: 0 auto;
+  @media (max-width: $breakpoint992) {
+    width: 680px;
+  }
+  @media (max-width: $breakpoint768) {
+    width: 320px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    &-item {
+      // gap: 26px;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid $secondary;
+      padding: 15px 27px;
+      color: #f8f8f8;
+      border-radius: 31px;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 27px;
+      @media (max-width: $breakpoint992) {
+        font-size: 16px;
+        line-height: 18px;
+      }
+      @media (max-width: $breakpoint768) {
+        padding: 7px 13px;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 15px;
+      }
+
+      &.active {
+        background: $secondary;
+        color: #515151;
+      }
+    }
+  }
+  &__content {
+    font-size: 75px;
+    width: 715px;
+    margin: 0 auto;
+    padding: 100px 0 100px 0;
+    @media (max-width: $breakpoint992) {
+      width: 480px;
+    }
+    @media (max-width: $breakpoint768) {
+      width: 320px;
+      padding: 40px 0;
+    }
+  }
+  &__content-item {
+    display: flex;
+    flex-direction: column;
+    .pay {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 45px;
+      // .pay__title
+
+      &__title {
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 27px;
+        color: $secondary;
+        margin-bottom: 12px;
+        @media (max-width: $breakpoint992) {
+          font-size: 16px;
+          line-height: 18px;
+        }
+        @media (max-width: $breakpoint768) {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+
+      // .pay__info
+
+      &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__nums {
+          font-size: 0;
+          input {
+            background: none;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: $secondary;
+            width: 450px;
+            @media (max-width: $breakpoint992) {
+              font-size: 18px;
+              line-height: 20px;
+              width: 275px;
+            }
+            @media (max-width: $breakpoint992) {
+              font-size: 16px;
+              line-height: 18px;
+            }
+          }
+        }
+        &__copy {
+          display: flex;
+          align-items: center;
+          position: relative;
+          cursor: pointer;
+          &__text {
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 27px;
+            color: #949494;
+            @media (max-width: $breakpoint992) {
+              font-size: 16px;
+              line-height: 18px;
+            }
+            @media (max-width: $breakpoint768) {
+              display: none;
+            }
+          }
+          &__plate {
+            display: none;
+            position: absolute;
+            top: -45px;
+            right: -80px;
+            background: #949494;
+            text-align: center;
+            padding: 5px 25px;
+            border-radius: 15px;
+            font-size: 12px;
+            color: $secondary;
+            width: 170px;
+          }
+          img {
+            margin-right: 7px;
+            @media (max-width: $breakpoint992) {
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

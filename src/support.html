@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+  <body class="main__body">
+    <!-- Header -->
+    <header>
+      <!-- Navbar -->
+      <nav>
+        <div class="container">
+          <div class="navbar">
+            <div class="logo">
+              <a href="/">
+                <img src="../img/logo.svg" alt="logo" />
+              </a>
+            </div>
+            <ul class="menu">
+              <li class="menu__item">
+                <a href="/" class="menu__item-link" data-scroll>Цель</a>
+              </li>
+              <li class="menu__item">
+                <a href="/" class="menu__item-link" data-scroll>Про фонд</a>
+              </li>
+              <li class="menu__item">
+                <a href="/" class="menu__item-link" data-scroll>Достижения</a>
+              </li>
+            </ul>
+            <div class="nav__btns">
+              <div class="langs">
+                <span class="lang">UA</span>
+                <span class="lang">RU</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- --------- breakpoint burger menu ----------------------- -->
+
+          <div class="navbar__burger">
+            <ul class="navbar__burger__menu">
+              <li class="navbar__burger__menu__item">
+                <a href="/" class="navbar__burger__menu__item-link" data-scroll
+                  ><div class="navbar__burger__menu__item-link__icon">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                  Цель</a
+                >
+              </li>
+              <li class="navbar__burger__menu__item">
+                <a href="" class="navbar__burger__menu__item-link" data-scroll>
+                  <div class="navbar__burger__menu__item-link__icon">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                  Про фонд</a
+                >
+              </li>
+              <li class="navbar__burger__menu__item">
+                <a href="/" class="navbar__burger__menu__item-link" data-scroll
+                  ><img src="../img/burger_logo.svg" alt="logo"
+                /></a>
+              </li>
+
+              <li class="navbar__burger__menu__item">
+                <a href="" class="navbar__burger__menu__item-link" data-scroll>
+                  <div class="navbar__burger__menu__item-link__icon">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                  Галерея</a
+                >
+              </li>
+              <li class="navbar__burger__menu__item">
+                <a href="" class="navbar__burger__menu__item-link" data-scroll>
+                  <div class="navbar__burger__menu__item-link__icon">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                  Партнеры</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section__support">
+        <div class="container">
+          <h2 class="support__title title">
+            СДЕЛАЙТЕ ВЗНОС В НАШ БЛАГОТВОРИТЕЛЬНЫЙ ФОНД
+          </h2>
+          @@include('./html/_support-tabs.html')
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    @@include('./html/_footer.html')
+  </body>
+
+  <script src="./js/scripts.min.js"></script>
+</html>

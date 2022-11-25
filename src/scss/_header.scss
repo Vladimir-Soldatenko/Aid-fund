@@ -1,0 +1,160 @@
+// Header
+
+// Navbar
+nav {
+  background-color: $backgroundHeader;
+  overflow: hidden;
+  border-bottom: 1px solid #dfdfdf80;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  @media (max-width: $breakpoint1024) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  @media screen and (max-width: $burgerBreakpoint) {
+    display: none;
+  }
+}
+
+.logo {
+  flex: 1 1;
+
+  a {
+    color: white;
+  }
+  img {
+    @media (max-width: $breakpoint1450) {
+      width: 120px;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+
+  // .menu__item
+  &__item {
+    margin-right: 100px;
+    @media (max-width: $breakpoint1450) {
+      margin-right: 50px;
+    }
+    .lang {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 120%;
+      color: $secondary;
+    }
+  }
+
+  // .menu__item-link
+  &__item-link {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $secondary;
+    transition: color 0.3s;
+    @media (max-width: $breakpoint1450) {
+      font-size: 16px;
+    }
+    @media (max-width: $breakpoint1024) {
+      font-size: 14px;
+    }
+    &:hover {
+      color: $btnBackground;
+    }
+  }
+}
+
+.nav {
+  // .nav__btns
+
+  &__btns {
+    display: flex;
+    gap: 100px;
+    @media (max-width: $breakpoint1450) {
+      gap: 50px;
+    }
+  }
+  // .nav__btn
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @media (max-width: $breakpoint1024) {
+      font-size: 16px;
+    }
+    img {
+      @media (max-width: $breakpoint1024) {
+        width: 20px;
+      }
+    }
+  }
+}
+
+// ------------------------ burger --------------------------
+
+.navbar__burger {
+  display: none;
+  @media screen and (max-width: $burgerBreakpoint) {
+    z-index: 20;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: $backgroundPrimary;
+    height: 60px;
+    padding: 15px 20px;
+    width: 100%;
+    &__menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      &__item {
+        font-size: 12px;
+        line-height: 14px;
+        @media (max-width: $breakpoint480) {
+          font-size: 8px;
+          line-height: 10px;
+        }
+
+        &-link {
+          color: $secondary;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          &__icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            flex-direction: column;
+
+            span {
+              height: 1px;
+              background: $secondary;
+              width: 100%;
+              margin-bottom: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}

@@ -1,0 +1,62 @@
+.founder {
+  background: $backgroundPrimary;
+  &__container {
+    display: flex;
+    @media (max-width: $breakpoint1450) {
+      flex-direction: column;
+    }
+  }
+  &__info {
+    margin-right: 20px;
+    width: 60%;
+    @media (max-width: $breakpoint1450) {
+      width: 100%;
+    }
+    &__title {
+      padding: 100px 0 20px 0;
+      color: $secondary;
+      @media (max-width: $breakpoint480) {
+        padding: 40px 0 10px 0;
+      }
+    }
+    &__subtitle {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 120%;
+      color: $secondary;
+      margin-bottom: 40px;
+      @media (max-width: $breakpoint480) {
+        margin-bottom: 20px;
+        font-size: 12px;
+      }
+    }
+    &__desc {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 140%;
+      color: $secondary;
+      @media (max-width: $breakpoint1450) {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: $breakpoint1024) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  // .founder__img
+
+  &__img {
+    @media (max-width: $breakpoint1450) {
+      width: 500px;
+      margin: 0 auto;
+    }
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+    }
+    &__photo {
+      width: 100%;
+    }
+  }
+}

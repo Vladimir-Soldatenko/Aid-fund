@@ -1,0 +1,224 @@
+.footer {
+  background: $backgroundPrimary;
+  &__container {
+    padding: 120px 0 150px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      padding: 40px 0 60px 0;
+    }
+  }
+  // .footer__name
+
+  &__name {
+    width: 33%;
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+    &__logo {
+      margin-bottom: 50px;
+      @media (max-width: 1200px) {
+        margin-bottom: 20px;
+      }
+      &__img {
+        @media (max-width: $breakpoint992) {
+          width: 120px;
+        }
+        @media (max-width: $breakpoint480) {
+          width: 85px;
+        }
+      }
+    }
+    &__subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: $primary;
+      @media (max-width: $breakpoint768) {
+        font-size: 12px;
+      }
+    }
+    &__title {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: $primary;
+      @media (max-width: $breakpoint992) {
+        font-size: 20px;
+      }
+      @media (max-width: $breakpoint768) {
+        font-size: 16px;
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1;
+    @media (max-width: 1200px) {
+      margin-top: 60px;
+      width: 100%;
+    }
+    @media (max-width: $breakpoint768) {
+      margin-top: 20px;
+    }
+  }
+  // .footer__about
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 20px;
+    @media (max-width: 1200px) {
+      width: 40%;
+    }
+    @media (max-width: $breakpoint768) {
+      gap: 10px;
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+      color: #e0e0e0;
+      @media (max-width: $breakpoint992) {
+        font-size: 18px;
+      }
+      @media (max-width: $breakpoint768) {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+    &__link {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #e0e0e0;
+      transition: 0.3s all;
+      font-size: 16px;
+      @media (max-width: $breakpoint768) {
+        font-size: 12px;
+        line-height: 15px;
+      }
+      &:hover {
+        color: $btnBackground;
+      }
+    }
+  }
+
+  // .footer__socials
+
+  &__socials {
+    @media (max-width: 1200px) {
+      width: 50%;
+    }
+    @media (max-width: $breakpoint480) {
+      width: 60%;
+    }
+
+    &__call {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      @media (max-width: $breakpoint768) {
+        flex-direction: column;
+        align-items: start;
+      }
+      @media (max-width: $breakpoint480) {
+        width: 70%;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        background: #ebebeb;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: -38px;
+        @media (max-width: $breakpoint768) {
+          bottom: 37px;
+        }
+      }
+      &__title {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: $secondary;
+        width: 40%;
+        @media (max-width: $breakpoint992) {
+          font-size: 18px;
+        }
+        @media (max-width: $breakpoint768) {
+          width: 100%;
+          margin-bottom: 15px;
+          font-size: 12px;
+          line-height: 15px;
+        }
+      }
+
+      &__btn {
+        font-size: 16px;
+        color: #000;
+        @media (max-width: $breakpoint768) {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 161.9%;
+          padding: 5px 13px;
+        }
+      }
+    }
+    &__email {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: $secondary;
+      margin-top: 69px;
+      @media (max-width: $breakpoint992) {
+        font-size: 16px;
+      }
+      @media (max-width: $breakpoint768) {
+        font-size: 14px;
+        line-height: 17px;
+        margin-top: 42px;
+      }
+      @media (max-width: $breakpoint480) {
+        position: relative;
+        left: -130px;
+      }
+    }
+    &__items {
+      display: flex;
+      align-items: center;
+      margin-top: 59px;
+      @media (max-width: $breakpoint768) {
+        margin-top: 9px;
+      }
+      @media (max-width: $breakpoint480) {
+        position: relative;
+        left: -130px;
+      }
+
+      &__link {
+        margin-right: 28px;
+
+        svg {
+          fill: #b8b8b8;
+          transition: 0.3s all;
+          @media (max-width: $breakpoint768) {
+            width: 25px;
+          }
+          &:hover {
+            fill: $btnBackground;
+          }
+        }
+      }
+    }
+  }
+}

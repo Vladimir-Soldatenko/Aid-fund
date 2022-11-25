@@ -1,0 +1,73 @@
+<!-- Modal -->
+<div class="modal__wrapper">
+  <div class="modal">
+    <div class="modal__close">
+      <img src="./img/modal_close.svg" alt="cancel" />
+    </div>
+    <div class="modal__title">
+      <span>Нужна помощь?</span>
+      <span>Обращайтесь!</span>
+    </div>
+    <div class="modal__body">
+      <form class="form">
+        <div class="modal__body__container">
+          <label for="#name" class="modal__body__label"> Ваше имя </label>
+          <div>
+            <input
+              type="text"
+              class="modal__body__input val"
+              placeholder="Как к вам обращаться?"
+              id="name"
+            />
+          </div>
+        </div>
+
+        <div class="modal__body__container">
+          <label for="#tel" class="modal__body__label"> Номер телефона </label>
+          <div>
+            <input
+              type="text"
+              class="modal__body__input val"
+              placeholder="+380 (--) -- -- ----"
+              id="tel"
+            />
+          </div>
+        </div>
+
+        <div class="modal__body__container">
+          <label for="#problem" class="modal__body__label">
+            Опишите просьбу
+          </label>
+          <div>
+            <textarea
+              name=""
+              id="problem"
+              class="modal__body__textarea val"
+              placeholder="Что у вас случилось?"
+            ></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="form__btn btn">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ----------- modal completed ------------- -->
+<div class="modal__wrapper__ok">
+  <div class="modal__ok">
+    <div class="modal__ok__close">
+      <img src="./img/modal_close.svg" alt="cancel" />
+    </div>
+    <div class="modal__ok__title">
+      <p class="modal__ok__title__desc">Спасибо за обращение!</p>
+      <p class="modal__ok__title__desc modal__ok__title__desc_subtitle">
+        Мы перезвоним в течение часа
+      </p>
+    </div>
+    <div class="modal__ok__body">
+      <img src="../img/ok.svg" alt="icon" />
+    </div>
+  </div>
+</div>
